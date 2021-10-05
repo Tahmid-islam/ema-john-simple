@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { addToDb, getStoredCart } from "../../utilities/fakedb";
+import { addToDb, getStoredCart } from "../../utilities/fakedb_old";
 import Cart from "../Cart/Cart";
 import Product from "../Product/Product";
 import "./Shop.css";
@@ -49,7 +49,6 @@ const Shop = () => {
     }
 
     setCart(newCart);
-
     //save to local storage for now
     addToDb(product.key);
   };
