@@ -7,8 +7,7 @@ import ReviewItem from "../ReviewItem/ReviewItem";
 import { useHistory } from "react-router-dom";
 
 const OrderReview = () => {
-  const [products] = useProducts();
-  const [cart, setCart] = useCart(products);
+  const [cart, setCart] = useCart();
   const history = useHistory();
 
   const handleRemove = (key) => {
@@ -20,7 +19,7 @@ const OrderReview = () => {
   const handleProceedToShipping = () => {
     // setCart([]);
     // clearTheCart();
-    history.push(`/shipping`);
+    history.push("/shipping");
   };
 
   return (
